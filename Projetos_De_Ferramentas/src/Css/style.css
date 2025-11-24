@@ -1,3 +1,4 @@
+/* Paletas De Cores */
 :root {
   --ceu-sereno-fundo: #E0F7FA;
   --ceu-sereno-texto: #004D40;
@@ -47,3 +48,90 @@
   --Preto-Sutil: #1C1C1C;
 }
 
+
+/* CONFIGURAÇÕES GERAIS   */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+.title {
+padding: 0.7rem;
+}
+
+/* SIDEBAR*/
+
+.sidebar {
+     position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #111;
+    color: white;
+    padding: 20px;
+    transition: left 0.35s ease;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: padding-left 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    padding-left: 10px;
+    color: #fff;
+}
+
+
+/* BOTÃO TOGGLE           */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 1100;
+}
+
+.toggle-btn:hover {
+    background: #333;
+}
+
+
+/* CONTEÚDO PRINCIPAL     */
+
+#page-content {
+    transition: filter .3s ease;
+    padding: 20px;
+}
