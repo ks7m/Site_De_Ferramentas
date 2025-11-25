@@ -1,3 +1,8 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
 /* Paletas De Cores */
 :root {
   --ceu-sereno-fundo: #E0F7FA;
@@ -52,9 +57,16 @@
 /* CONFIGURAÇÕES GERAIS   */
 
 body {
+    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background: #fff;
+      background-image: linear-gradient(
+        to bottom,
+        #6A0DAD 0%,    /* Roxo Elétrico */
+        #0D001A 75%    /* Índigo Profundo/Quase Preto */
+    );
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -68,7 +80,7 @@ padding: 0.7rem;
     top: 0;
     /*left: 260px;*/
     width: 260px;
-    height: 100%;
+    height: auto;
     background: #111;
     color: white;
     padding: 100px 25px;
@@ -136,7 +148,11 @@ padding: 0.7rem;
 }
 
 .page-content {
-    margin-left: 260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
 
 /* FOOTER */
