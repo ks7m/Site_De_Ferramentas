@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista De Tarefas</title>
+    <title>Lista De Tarefas</title> 
+    <link rel="stylesheet" href="Projetos_De_Ferramentas/src/Css/tarefas.css">
 </head>
 <body>
-    <header> 
+       <header> 
         <h1 class="title">Lista De Tarefas</h1>
-        <p>Adicione suas tarefas aqui</p>
+        <p>
+        Esta To-Do List foi criada para organizar tarefas de forma simples e eficiente.
+        Aqui você pode adicionar, marcar como concluído ou remover atividades, mantendo
+        tudo sob controle durante o seu dia. O objetivo é facilitar seu fluxo de trabalho
+        e garantir que nada importante seja esquecido.
+        </p>
     </header>
-    <main>
-        <input type="text">
 
-    </main>    
+   <main>
+        <input type="text" id="taskInput" placeholder="Digite sua tarefa" required>
+        <button class="addTaskBtn" id="addTaskBtn">Adicione Sua Tarefa</button>
 
-
-
-
-
-
+        <!-- Lista onde as tarefas aparecerão -->
+        <ul id="taskList"></ul>
+    </main>       
 
 
-    
+<script src="Projetos_De_Ferramentas/src/Js/tarefas.js"></script>
 </body>
 </html>
