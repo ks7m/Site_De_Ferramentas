@@ -7,7 +7,7 @@ buttons.forEach(btn => {
     btn.addEventListener("click", () => {
         const value = btn.getAttribute("data-key");
 
-        // Limpar tudo
+        // Limpa tudo
         if (btn.id === "clear") {
             current = "";
             display.textContent = "0";
