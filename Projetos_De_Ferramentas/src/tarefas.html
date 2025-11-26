@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="Css/tarefas.css">
 </head>
 <body>
+    <div class="sky"></div>
        <header> 
-        <h1 class="title">Lista De Tarefas</h1>
-        <p>
+        <div class="container">
+            <h1 class="title">Lista De Tarefas</h1>
+        </div>
+        <p class="explicacao">
         Esta To-Do List foi criada para organizar tarefas de forma simples e eficiente.
         Aqui você pode adicionar, marcar como concluído ou remover atividades, mantendo
         tudo sob controle durante o seu dia. O objetivo é facilitar seu fluxo de trabalho
@@ -18,12 +21,13 @@
     </header>
 
    <main>
-        <input type="text" id="taskInput" placeholder="Digite sua tarefa" required>
-        <button class="addTaskBtn" id="addTaskBtn">Adicione Sua Tarefa</button>
-
+        <input class="text" type="text" id="taskInput" placeholder="Digite sua tarefa" required>        
+        <br>        
+        <button class="addtask" id="addTaskBtn">Adicione Sua Tarefa</button>
+        
         <!-- Lista onde as tarefas aparecerão -->
         <ul id="taskList"></ul>
-    </main>       
+    </main>        
 
 
 <script src="Js/tarefas.js"></script>

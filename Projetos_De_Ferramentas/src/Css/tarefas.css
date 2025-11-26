@@ -1,14 +1,90 @@
-* {
-    padding: 0%;
-    margin: 0%;
-    font-family: Arial, Helvetica, sans-serif;
+/* Paleta Dark Roxo */
+:root {
+    /* Fundo geral */
+    --bg-main: #0F0A17;
+    --bg-elevated: #1A1126;
+
+    /* Superfícies */
+    --surface-1: #22172F;
+    --surface-2: #2E1D40;
+
+    /* Texto */
+    --text-primary: #E6DAFF;
+    --text-secondary: #BCA7E9;
+    --text-muted: #8B74B8;
+
+    /* Acentos */
+    --accent: #A678FF;
+    --accent-hover: #C2A3FF;
+    --accent-dark: #6C45B6;
+
+    /* Bordas e sombras */
+    --border-color: #3D2A5B;
+    --shadow-soft: rgba(166, 120, 255, 0.15);
+
+    /* Estados */
+    --success: #6EE7B7;
+    --danger: #F87171;
 }
 
-.butao {
-    padding: 1rem;
-    margin: 18rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
 }
-input {
-    padding: 1.5rem;
+
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.title {
+    color: var(--accent-hover);
+    margin-bottom: 13px;
+    font-size: 2.9rem;
+    text-align: center;
+}
+ .sky::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    100px 50px #fff,
+    200px 80px #fff,
+    350px 120px #fff,
+    800px 400px #fff,
+    600px 200px #fff,
+    1200px 500px #fff,
+    1400px 300px #fff,
+    1600px 700px #fff,
+    1900px 100px #fff,
+    400px 600px #fff,
+    900px 900px #fff,
+    150px 900px #fff,
+    1800px 600px #fff;
     
+ } 
+ .explicacao{
+    text-align: center;
+     color: var(--accent-hover);
+    margin-bottom: 13px;
+    font-size: 1.1rem;
+    text-align: center;
+ }
+main {
+    background-color: var(--shadow-soft);
+    padding: 13px;
+    border-radius: 30px;
+}
+.text {
+    padding: 0.9rem;
+    margin: 14px;
+
 }
