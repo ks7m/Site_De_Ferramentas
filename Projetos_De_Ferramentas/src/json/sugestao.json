@@ -1,0 +1,52 @@
+{
+  "fontSuggestions": [
+    {
+      "name": "Arimo",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap",
+      "description": "Fonte sans-serif limpa, ótima para textos longos e interfaces minimalistas.",
+      "css": {
+        "fontFamily": "'Arimo', sans-serif"
+      }
+    },
+    {
+      "name": "Exo 2",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap",
+      "description": "Visual técnico e moderno, boa para títulos e elementos futuristas.",
+      "css": {
+        "fontFamily": "'Exo 2', sans-serif"
+      }
+    },
+    {
+      "name": "Open Sans",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+      "description": "Clássica e extremamente legível; ótima para qualquer interface.",
+      "css": {
+        "fontFamily": "'Open Sans', sans-serif"
+      }
+    },
+    {
+      "name": "Raleway",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap",
+      "description": "Elegante e estilosa, funciona bem em títulos e layouts mais clean.",
+      "css": {
+        "fontFamily": "'Raleway', sans-serif"
+      }
+    },
+    {
+      "name": "Rubik",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
+      "description": "Fonte arredondada, amigável e moderna, excelente para UI/UX.",
+      "css": {
+        "fontFamily": "'Rubik', sans-serif"
+      }
+    },
+    {
+      "name": "Montserrat",
+      "googleFontUrl": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
+      "description": "Muito usada em designs profissionais; forte para títulos e layouts modernos.",
+      "css": {
+        "fontFamily": "'Montserrat', sans-serif"
+      }
+    }
+  ]
+}
