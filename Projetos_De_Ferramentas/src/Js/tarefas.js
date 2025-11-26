@@ -38,10 +38,7 @@ function addTask() {
     input.value = "";
 }
 
-
-
-
-                            //Isso abaixo ficara nos bastidores
+//Isso abaixo ficara nos bastidores
          // ⏳ Em desenvolvimento. O dev do futuro que lute pra terminar isso.
          // 🤯 Código em progresso — não pergunte quando vai ficar pronto.
 
