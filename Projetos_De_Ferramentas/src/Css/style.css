@@ -1,11 +1,7 @@
-body{
-    display: flex;
-    justify-content: center;
-    
-}
-
 /* Paletas De Cores */
 :root {
+    /* Gab0 - Deixei isso aqui em comentário para termos como referências de umas cores a mais, mas vou criar umas var para ficar mais fácil de procurar o que é cor de background ou fonte...
+
   --ceu-sereno-fundo: #E0F7FA;
   --ceu-sereno-texto: #004D40;
 
@@ -52,51 +48,102 @@ body{
   --minimalista-chic-texto: #212121;
 
   --Preto-Sutil: #1C1C1C;
-}
+  */
 
+  --background-color: #6A0DAD; /*roxo elétrico*/
+  --fade_background-color: #0D001A; /* índigo profundo(quase preto)*/
+  --main-tittle_font: "Science Gothic", sans-serif, Arial;
+  --body_font: "Roboto Condensed", Arial, sans-serif;
+  --footer_font: "Cutive Mono", sans-serif, Mono;
+}
 
 /* CONFIGURAÇÕES GERAIS   */
 
 body {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--body_font);
     background: #fff;
-      background-image: linear-gradient(
+    background-image: linear-gradient(
         to bottom,
-        #6A0DAD 0%,    /* Roxo Elétrico */
-        #0D001A 75%    /* Índigo Profundo/Quase Preto */
+        var(--background-color) 0%,
+        var(--fade_background-color) 75%
     );
     background-repeat: no-repeat;
 }
 
-.title {
-padding: 0.7rem;
+/* CONTEÚDO PRINCIPAL     */
+
+#page-content {
+    transition: filter .3s ease;
+    padding: 5px;
 }
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    font-family: var(--main-tittle_font);
+}
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mainpage_box_org{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 100px;
+}
+
+#about_box {
+    width: 90%;
+    text-align: center;
+    /*Gab0: nesta parte, não estou conseguindo deixar essa caixa alinhada com as outras, gostaria de ajuda nisso, por favor.*/
+}
+
+.mainpage_box {
+    width: 30%;
+    padding: 10px;
+    border: 2px solid #f1f1f1;
+    border-radius: 25px;
+}
+    .mainpage_box h3 {
+        font-family: var(--main-tittle_font);
+    }
 
 /* SIDEBAR*/
 
 .sidebar {
-    position: fixed;
+    position: relative;
     top: 0;
-    /*left: 260px;*/
-    width: 260px;
-    height: auto;
+    width: 300px;
+    height: 100vh;
     background: #111;
     color: white;
+    font-family: var(--body_font);
+    font-size: 2rem;
     padding: 100px 25px;
     transition: left 0.35s ease;
     box-sizing: border-box;
     z-index: 1000;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
 }
 
 .sidebar ul {
@@ -120,8 +167,8 @@ padding: 0.7rem;
     color: #fff;
 }
 
-/* BOTÃO TOGGLE           */
-
+/* BOTÃO TOGGLE           */ 
+/*Gab0: acho que podemos apagar esta parte, visto que a sidebar vai estar fixa na lateral*/
 .toggle-btn {
     position: fixed;
     top: 20px;
@@ -140,35 +187,33 @@ padding: 0.7rem;
     background: #333;
 }
 
-
-/* CONTEÚDO PRINCIPAL     */
-
-#page-content {
-    transition: filter .3s ease;
-    padding: 20px;
-}
-
-.page-content {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
 /* FOOTER */
 
 footer {
+    display: block;
+    position: relative;
+    right: 25%;
     width: 50%;
+    margin-top: 50px;
 }
 
-    footer p {
-        font-weight: bold;
-    }
-
-    footer address {
+        footer address {
         display: grid;
         grid-template-columns: repeat(2, 200px);
         grid-template-rows: repeat(3, 30px);
         column-gap: 5px;
+        text-decoration: none;
+        font-family: var(--footer_font);
     }
+
+    footer address a {
+        color: #f1f1f1;
+        text-decoration: none;
+        transition: all 50ms linear;
+    }
+        footer address a:hover {
+            font-size: 1.2rem;
+        } 
+
+
+/*media query no final do projeto*/

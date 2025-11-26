@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Projetos_De_Ferramentas/src/Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <!--LINK PARA USARMOS O FONT-AWESOME E INSERIRMOS UNS ÍCONES-->
+    <!--LINK PARA A FONTE DE TÍTULO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- LINK PARA A FONTE DO BODY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--LINK PARA A FONTE DO FOOTER-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     <title>Toolbox Diário</title>
 </head>
 
@@ -19,8 +32,6 @@
         </ul>
     </nav>
 
-<!--Gab0: se preferirem, podemos deixar o layout do site com a navbar fixa, vou só ajustar as medidas para que a gente consiga ver isso bem e não precisamos aplicar essa questão do botão. A não ser que façamos com que a lista desça do botão-->
-
 <div class="page-content" id="page-content">
     <header>
         <h1>Toolbox Diário</h1>
@@ -28,31 +39,30 @@
     </header>
 
     <main>
-        <div class="mainpage_org">
-        <article class="mainpage_box">
+        <article class="mainpage_box" id="about_box">
             <h3>O que é o Toolbox Diário?</h3>
             <p>O Toolbox Diário é o seu destino único e centralizado para ferramentas práticas e essenciais que você usa todos os dias. Nosso objetivo é simplificar a sua rotina, oferecendo utilitários rápidos e fáceis de usar, acessíveis a partir de qualquer dispositivo.</p>
         </article>
+        <div class="mainpage_box_org">
+            <article class="mainpage_box">
+                <h3>Ferramentas</h3> <!--Gab0: Acho que ficaria legal aqui colocar uma imagem prévia de cada página-->
+                <ul>
+                    <li>Previsão do tempo</li>
+                    <li>Calculadora</li>
+                    <li>Lista de tarefas</li>
+                    <li>Tradutor</li>
+                </ul>
+            </article>
 
-        <article>
-            <h3>Ferramentas</h3> <!--Gab0: Acho que ficaria legal aqui colocar uma imagem prévia de cada página-->
-            <ul>
-                <li>Previsão do tempo</li>
-                <li>Calculadora</li>
-                <li>Lista de tarefas</li>
-                <li>Tradutor</li>
-            </ul>
-        </article>
-
-        <aside>
-            <h3>Como usar?</h3>
-            <p>Use a barra de navegação lateral para selecionar uma das nossas ferramentas.</p>
-        </aside>
-    </div>
+            <aside class="mainpage_box">
+                <h3>Como usar?</h3>
+                <p>Use a barra de navegação lateral para selecionar uma das nossas ferramentas.</p>
+            </aside>
+        </div>
     </main>
 
     <footer>
-        <p>Desenvolvedores:</p>
+        <h2>Desenvolvedores:</h2>
         <address>
             <a href="https://github.com/ks7m">Kauan Souza</a>
             <a href="">Lucas Emanoel</a>
