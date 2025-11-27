@@ -202,25 +202,6 @@ main {
     color: #fff;
 }
 
-/* BOTÃO TOGGLE           */ 
-/*Gab0: acho que podemos apagar esta parte, visto que a sidebar vai estar fixa na lateral*/
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 26px;
-    background: #222;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 1100;
-}
-
-.toggle-btn:hover {
-    background: #333;
-}
 
 /* FOOTER */
 
@@ -249,6 +230,23 @@ footer {
         footer address a:hover {
             font-size: 1.2rem;
         } 
+.card_ferramenta {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card_ferramenta:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 18px rgba(131, 60, 255, 0.5);
+}
+
+.card_ferramenta img {
+    transition: transform 0.25s ease;
+}
+
+.card_ferramenta:hover img {
+    transform: scale(1.05);
+}
+
 
 
 /*media query no final do projeto*/
