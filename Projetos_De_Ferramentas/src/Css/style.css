@@ -86,6 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 20px;
     color: white;
 }
 
@@ -109,15 +110,22 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
     gap: 100px;
 }
 
 #about_box {
-    width: 90%;
+    width: 85%;
+    padding: 0 50px;
     text-align: center;
-    /*Gab0: nesta parte, não estou conseguindo deixar essa caixa alinhada com as outras, gostaria de ajuda nisso, por favor.*/
 }
+    #about_box h3 {
+        font-family: var(--main-tittle_font);
+        font-size: 1.5rem;
+    }
+    #about_box p {
+        text-align: justify;
+        font-size: 1.2rem;
+    }
 
 .mainpage_box {
     width: 30%;
@@ -125,8 +133,35 @@ main {
     border: 2px solid #f1f1f1;
     border-radius: 25px;
 }
-    .mainpage_box h3 {
+.mainpage_box_org {
+    display: flex;
+    flex-direction: row;
+}
+    .mainpage_box_org article {
+        display: flex;
+        flex-direction: row;
+        width: 25%;
+        padding: 10px;
+        gap: 15px;
+        border: #f1f1f1 2px solid;
+        border-radius: 25px;
+        transition: all 200ms linear;
+    }
+        .mainpage_box_org article:hover {
+            box-shadow: 0px 0px 20px #f1f1f1;
+        }
+    .mainpage_box_org img {
+        width: 30%;
+        border-radius: 25px;
+    }
+    .mainpage_box_org h3 {
         font-family: var(--main-tittle_font);
+        text-align: center;
+    }
+    .card_text {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
     }
 
 /* SIDEBAR*/
