@@ -1,71 +1,63 @@
-/* Paletas De Cores */
+
 :root {
-    /* Gab0 - Deixei isso aqui em comentário para termos como referências de umas cores a mais, mas vou criar umas var para ficar mais fácil de procurar o que é cor de background ou fonte...
 
-  --ceu-sereno-fundo: #E0F7FA;
-  --ceu-sereno-texto: #004D40;
+    /* Gab0 - Paletas para referência */
+    --ceu-sereno-fundo: #E0F7FA;
+    --ceu-sereno-texto: #004D40;
+    --lavanda-suave-fundo: #EDE7F6;
+    --lavanda-suave-texto: #4527A0;
+    --areia-e-mar-fundo: #FFFDE7;
+    --areia-e-mar-texto: #006064;
+    --por-do-sol-neon-fundo: #FFCCBC;
+    --por-do-sol-neon-texto: #FF3D00;
+    --cyber-limao-fundo: #F0F4C3;
+    --cyber-limao-texto: #558B2F;
+    --framboesa-ousada-fundo: #FCE4EC;
+    --framboesa-ousada-texto: #880E4F;
+    --noite-estrelada-fundo: #263238;
+    --noite-estrelada-texto: #FFEB3B;
+    --floresta-mistica-fundo: #3E2723;
+    --floresta-mistica-texto: #DCE775;
+    --vinho-e-ouro-fundo: #4A148C;
+    --vinho-e-ouro-texto: #FFD740;
+    --cha-canela-fundo: #FBE9E7;
+    --cha-canela-texto: #5D4037;
+    --trigo-e-sol-fundo: #FFF8E1;
+    --trigo-e-sol-texto: #FF8A65;
+    --menta-fresca-fundo: #E8F5E9;
+    --menta-fresca-texto: #33691E;
+    --cimento-e-fogo-fundo: #E0E0E0;
+    --cimento-e-fogo-texto: #D50000;
+    --gelato-manga-fundo: #FFECB3;
+    --gelato-manga-texto: #1A237E;
+    --minimalista-chic-fundo: #FFFFFF;
+    --minimalista-chic-texto: #212121;
+    --Preto-Sutil: #1C1C1C;
+    
 
-  --lavanda-suave-fundo: #EDE7F6;
-  --lavanda-suave-texto: #4527A0;
+    --background-color: #6A0DAD; /*roxo elétrico*/
+    --fade_background-color: #0D001A; /* índigo profundo(quase preto)*/
 
-  --areia-e-mar-fundo: #FFFDE7;
-  --areia-e-mar-texto: #006064;
-
-  --por-do-sol-neon-fundo: #FFCCBC;
-  --por-do-sol-neon-texto: #FF3D00;
-
-  --cyber-limao-fundo: #F0F4C3;
-  --cyber-limao-texto: #558B2F;
-
-  --framboesa-ousada-fundo: #FCE4EC;
-  --framboesa-ousada-texto: #880E4F;
-
-  --noite-estrelada-fundo: #263238;
-  --noite-estrelada-texto: #FFEB3B;
-
-  --floresta-mistica-fundo: #3E2723;
-  --floresta-mistica-texto: #DCE775;
-
-  --vinho-e-ouro-fundo: #4A148C;
-  --vinho-e-ouro-texto: #FFD740;
-
-  --cha-canela-fundo: #FBE9E7;
-  --cha-canela-texto: #5D4037;
-
-  --trigo-e-sol-fundo: #FFF8E1;
-  --trigo-e-sol-texto: #FF8A65;
-
-  --menta-fresca-fundo: #E8F5E9;
-  --menta-fresca-texto: #33691E;
-
-  --cimento-e-fogo-fundo: #E0E0E0;
-  --cimento-e-fogo-texto: #D50000;
-
-  --gelato-manga-fundo: #FFECB3;
-  --gelato-manga-texto: #1A237E;
-
-  --minimalista-chic-fundo: #FFFFFF;
-  --minimalista-chic-texto: #212121;
-
-  --Preto-Sutil: #1C1C1C;
-  */
-
-  --background-color: #6A0DAD; /*roxo elétrico*/
-  --fade_background-color: #0D001A; /* índigo profundo(quase preto)*/
-  --main-tittle_font: "Science Gothic", sans-serif, Arial;
-  --body_font: "Roboto Condensed", Arial, sans-serif;
-  --footer_font: "Cutive Mono", sans-serif, Mono;
+    --main-tittle_font: "Science Gothic", sans-serif, Arial;
+    --body_font: "Roboto Condensed", Arial, sans-serif;
+    --footer_font: "Cutive Mono", sans-serif, Mono;
 }
 
-/* CONFIGURAÇÕES GERAIS   */
+
+/*===========================================================
+    CONFIGURAÇÕES GERAIS
+===========================================================*/
 
 body {
+    background-color: #000;
+    transition: .5s;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
     margin: 0;
     font-family: var(--body_font);
+
     background: #fff;
     background-image: linear-gradient(
         to bottom,
@@ -74,8 +66,6 @@ body {
     );
     background-repeat: no-repeat;
 }
-
-/* CONTEÚDO PRINCIPAL     */
 
 #page-content {
     transition: filter .3s ease;
@@ -90,14 +80,24 @@ body {
     color: white;
 }
 
+
+/*    HEADER    */
+
+
 header {
     position: relative;
     text-align: center;
     font-family: var(--main-tittle_font);
 }
-    header h1 {
-        font-size: 3.5rem;
-    }
+
+header h1 {
+    font-size: 3.5rem;
+}
+
+
+
+/*    MAIN*/
+
 
 main {
     display: flex;
@@ -106,7 +106,7 @@ main {
     gap: 20px;
 }
 
-.mainpage_box_org{
+.mainpage_box_org {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -118,14 +118,16 @@ main {
     padding: 0 50px;
     text-align: center;
 }
-    #about_box h3 {
-        font-family: var(--main-tittle_font);
-        font-size: 1.5rem;
-    }
-    #about_box p {
-        text-align: justify;
-        font-size: 1.2rem;
-    }
+
+#about_box h3 {
+    font-family: var(--main-tittle_font);
+    font-size: 1.5rem;
+}
+
+#about_box p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
 
 .mainpage_box {
     width: 30%;
@@ -133,38 +135,69 @@ main {
     border: 2px solid #f1f1f1;
     border-radius: 25px;
 }
+
 .mainpage_box_org {
     display: flex;
     flex-direction: row;
 }
-    .mainpage_box_org article {
-        display: flex;
-        flex-direction: row;
-        width: 25%;
-        padding: 10px;
-        gap: 15px;
-        border: #f1f1f1 2px solid;
-        border-radius: 25px;
-        transition: all 200ms linear;
-    }
-        .mainpage_box_org article:hover {
-            box-shadow: 0px 0px 20px #f1f1f1;
-        }
-    .mainpage_box_org img {
-        width: 30%;
-        border-radius: 25px;
-    }
-    .mainpage_box_org h3 {
-        font-family: var(--main-tittle_font);
-        text-align: center;
-    }
-    .card_text {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-    }
 
-/* SIDEBAR*/
+.mainpage_box_org article {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    padding: 10px;
+    gap: 15px;
+
+    border: #f1f1f1 2px solid;
+    border-radius: 25px;
+    transition: all 200ms linear;
+}
+
+.mainpage_box_org article:hover {
+    box-shadow: 0px 0px 20px #f1f1f1;
+}
+
+.mainpage_box_org img {
+    width: 30%;
+    border-radius: 25px;
+}
+
+.mainpage_box_org h3 {
+    font-family: var(--main-tittle_font);
+    text-align: center;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+
+/*
+    CARDS COM EFEITO
+*/
+
+.card_ferramenta {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card_ferramenta:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 18px rgba(131, 60, 255, 0.5);
+}
+
+.card_ferramenta img {
+    transition: transform 0.25s ease;
+}
+
+.card_ferramenta:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* SIDEBAR  */
 
 .sidebar {
     position: relative;
@@ -173,8 +206,10 @@ main {
     height: 100vh;
     background: #111;
     color: white;
+
     font-family: var(--body_font);
     font-size: 2rem;
+
     padding: 100px 25px;
     transition: left 0.35s ease;
     box-sizing: border-box;
@@ -203,7 +238,8 @@ main {
 }
 
 
-/* FOOTER */
+   /* FOOTER */
+
 
 footer {
     display: block;
@@ -213,40 +249,28 @@ footer {
     margin-top: 50px;
 }
 
-        footer address {
-        display: grid;
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(3, 30px);
-        column-gap: 5px;
-        text-decoration: none;
-        font-family: var(--footer_font);
-    }
+footer address {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 30px);
+    column-gap: 5px;
 
-    footer address a {
-        color: #f1f1f1;
-        text-decoration: none;
-        transition: all 50ms linear;
-    }
-        footer address a:hover {
-            font-size: 1.2rem;
-        } 
-.card_ferramenta {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    font-family: var(--footer_font);
 }
 
-.card_ferramenta:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 0 18px rgba(131, 60, 255, 0.5);
+footer address a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: all 50ms linear;
 }
 
-.card_ferramenta img {
-    transition: transform 0.25s ease;
-}
-
-.card_ferramenta:hover img {
-    transform: scale(1.05);
+footer address a:hover {
+    font-size: 1.2rem;
 }
 
 
+   /* MEDIA QUERIES QUANDO FOR FAZER    /*
 
-/*media query no final do projeto*/
+
+/* media query no final do projeto */
