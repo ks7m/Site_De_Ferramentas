@@ -1,4 +1,3 @@
-
 :root {
 
     /* Gab0 - Paletas para referência */
@@ -33,10 +32,12 @@
     --minimalista-chic-fundo: #FFFFFF;
     --minimalista-chic-texto: #212121;
     --Preto-Sutil: #1C1C1C;
-    
 
-    --background-color: #6a0dad; /*roxo elétrico*/
-    --fade_background-color: #0D001A; /* índigo profundo(quase preto)*/
+
+    --background-color: #6a0dad;
+    /*roxo elétrico*/
+    --fade_background-color: #0D001A;
+    /* índigo profundo(quase preto)*/
 
     --main-tittle_font: "Science Gothic", sans-serif, Arial;
     --body_font: "Roboto Condensed", Arial, sans-serif;
@@ -59,11 +60,9 @@ body {
     font-family: var(--body_font);
 
     background: #fff;
-    background-image: linear-gradient(
-        to bottom,
-        var(--background-color) 0%,
-        var(--fade_background-color) 75%
-    );
+    background-image: linear-gradient(to bottom,
+            var(--background-color) 0%,
+            var(--fade_background-color) 75%);
     background-repeat: no-repeat;
 }
 
@@ -255,7 +254,7 @@ main {
 }
 
 
-   /* FOOTER */
+/* FOOTER */
 
 
 footer {
@@ -286,8 +285,89 @@ footer address a:hover {
     font-size: 1.2rem;
 }
 
+/* media query */
 
-   /* MEDIA QUERIES QUANDO FOR FAZER    /*
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
 
-/* media query no final do projeto */
+    .sidebar div {
+        align-items: center;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .sidebar ul li {
+        margin: 5px 0;
+    }
+
+    .page-content {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mainpage_box_org {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mainpage_box_org article {
+        width: 80%;
+    }
+
+    #about_box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    footer {
+        width: 90%;
+        right: auto;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    footer address {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    header h3 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .mainpage_box_org article {
+        width: 100%;
+    }
+
+    .sidebar img {
+        width: 150px;
+    }
+
+    footer address {
+        grid-template-columns: 1fr;
+    }
+}
