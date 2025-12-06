@@ -1,0 +1,146 @@
+:root{
+  --bg:#0c0f14;
+  --card-bg:#171b22;
+  --text:#e3e3e3;
+  --subtext:#9da3ad;
+  --accent:#3a82f7;
+  --border:#1f242c;
+  --shadow:rgba(0,0,0,0.45);
+}
+
+/* Base dark */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  overflow:hidden;
+  transition:background 0.6s ease;
+}
+
+/* Card */
+.weather-card{
+  background:var(--card-bg);
+  width:360px;
+  padding:24px;
+  border-radius:14px;
+  box-shadow:0 10px 30px var(--shadow);
+  border:1px solid var(--border);
+  z-index:10;
+  position:relative;
+}
+
+/* Header/search */
+.weather-card h1{color:var(--accent);font-weight:600;margin:0;text-align:center}
+.search-box{display:flex;background:#0f1218;border-radius:10px;padding:6px;margin-top:16px;border:1px solid var(--border)}
+.search-box input{flex:1;background:transparent;border:none;outline:none;color:var(--text);padding:6px}
+.search-box button{background:transparent;border:none;cursor:pointer;color:var(--accent)}
+
+/* Info */
+#city-name{text-align:center;font-size:20px;margin-top:14px}
+.main-temp{font-size:48px;font-weight:700;text-align:center;margin-top:6px}
+.unit{font-size:18px;color:var(--subtext);margin-left:6px}
+.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.detail-item{background:#10141d;padding:10px;border-radius:10px;border:1px solid var(--border)}
+.label{font-size:12px;color:var(--subtext)}
+.value{font-weight:600;margin-top:6px;display:block}
+
+/* Body themes (background gradient) */
+body.weather-sunny{background:linear-gradient(180deg,#2b6cb0 0%,#97c1ff 100%)}
+body.weather-cloudy{background:linear-gradient(180deg,#3b3f44 0%,#6b6f73 100%)}
+body.weather-rainy{background:linear-gradient(180deg,#0b1720 0%,#233241 100%)}
+body.weather-snow{background:linear-gradient(180deg,#1f2a33 0%,#93b6d6 100%)}
+body.weather-fog{background:linear-gradient(180deg,#2b2b2b 0%,#5b5b5b 100%)}
+
+/* Common overlay container for visual elements */
+.weather-visual{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* SUN */
+.sun{
+  position:fixed;
+  right:10%;
+  top:8%;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #fff7a8 0%, #ffd166 40%, #ffb347 60%, rgba(255,180,71,0.6) 100%);
+  box-shadow:0 0 80px rgba(255,200,60,0.25), inset 0 -10px 30px rgba(255,230,120,0.08);
+  animation: sunMove 14s linear infinite;
+  opacity:0.98;
+}
+@keyframes sunMove{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(8px)}
+  100%{transform:translateY(0)}
+}
+
+/* CLOUDS */
+.clouds{
+  position:fixed;
+  left:-15%;
+  top:18%;
+  width:140%;
+  height:200px;
+  overflow:hidden;
+}
+.cloud{
+  position:absolute;
+  top:20px;
+  background:linear-gradient(180deg,#e9eef8 0%,#d6dfe9 100%);
+  width:140px;height:60px;border-radius:50px;filter:blur(8px);opacity:0.85;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform:translateX(0);
+  animation: cloudMove linear infinite;
+}
+.cloud.x1{top:20px;left:5%;width:160px;height:60px;animation-duration:38s}
+.cloud.x2{top:40px;left:35%;width:220px;height:80px;animation-duration:48s;opacity:0.95}
+.cloud.x3{top:10px;left:70%;width:150px;height:50px;animation-duration:44s;opacity:0.9}
+@keyframes cloudMove{
+  from{transform:translateX(-20vw)}
+  to{transform:translateX(120vw)}
+}
+
+/* RAIN */
+.rain{position:fixed;inset:0;pointer-events:none;z-index:5}
+.rain .drop{
+  position:absolute;
+  width:2px;height:18px;background:linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.15) 100%);
+  border-radius:2px;
+  filter:blur(0.3px);
+  animation: fall linear infinite;
+  opacity:0.75;
+}
+@keyframes fall{
+  0%{transform:translateY(-10vh); opacity:0.6}
+  100%{transform:translateY(110vh); opacity:0.9}
+}
+
+/* SNOW */
+.snow{position:fixed;inset:0;pointer-events:none;z-index:5}
+.snow .flake{
+  position:absolute;
+  width:8px;height:8px;background:white;border-radius:50%;opacity:0.92;
+  filter:blur(0.2px);
+  animation:snowFall linear infinite;
+}
+@keyframes snowFall{
+  0%{transform:translateY(-5vh) translateX(0); opacity:0.9}
+  100%{transform:translateY(110vh) translateX(40vw); opacity:0.95}
+}
+
+/* small responsiveness */
+@media (max-width:420px){
+  .weather-card{width:92%;padding:16px}
+  .sun{width:80px;height:80px;right:6%;top:6%}
+}
