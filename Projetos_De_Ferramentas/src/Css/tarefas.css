@@ -1,90 +1,141 @@
-/* Paleta Dark Roxo */
-:root {
-    /* Fundo geral */
-    --bg-main: #0F0A17;
-    --bg-elevated: #1A1126;
-
-    /* Superfícies */
-    --surface-1: #22172F;
-    --surface-2: #2E1D40;
-
-    /* Texto */
-    --text-primary: #E6DAFF;
-    --text-secondary: #BCA7E9;
-    --text-muted: #8B74B8;
-
-    /* Acentos */
-    --accent: #A678FF;
-    --accent-hover: #C2A3FF;
-    --accent-dark: #6C45B6;
-
-    /* Bordas e sombras */
-    --border-color: #3D2A5B;
-    --shadow-soft: rgba(166, 120, 255, 0.15);
-
-    /* Estados */
-    --success: #6EE7B7;
-    --danger: #F87171;
-}
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-    background: var(--bg-main);
-    color: var(--text-primary);
+    background: #0d0f16;
+    color: #fff;
+    overflow-x: hidden; 
+    position: relative;
+}
+
+.sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+
+    background: linear-gradient(120deg, #0d0f16, #1b2236, #0d0f16);
+    background-size: 300% 300%;
+
+    animation: skyMove 15s infinite alternate ease-in-out;
+}
+
+@keyframes skyMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.bubble {
+    position: fixed;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: rgba(2, 255, 107, 0.521);
+    border-radius: 50%;
+    animation: rise 8s infinite ease-in-out;
+    filter: blur(2px);
+    z-index: -2;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 0.3; }
+    50% { opacity: 0.6; }
+    100% { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+}
+
+header {
     padding: 40px 20px;
-    line-height: 1.5;
+    text-align: center;
 }
 
 .title {
-    color: var(--accent-hover);
-    margin-bottom: 13px;
-    font-size: 2.9rem;
-    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
- .sky::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: white;
-  border-radius: 50%;
-  box-shadow:
-    100px 50px #fff,
-    200px 80px #fff,
-    350px 120px #fff,
-    800px 400px #fff,
-    600px 200px #fff,
-    1200px 500px #fff,
-    1400px 300px #fff,
-    1600px 700px #fff,
-    1900px 100px #fff,
-    400px 600px #fff,
-    900px 900px #fff,
-    150px 900px #fff,
-    1800px 600px #fff;
-    
- } 
- .explicacao{
-    text-align: center;
-     color: var(--accent-hover);
-    margin-bottom: 13px;
-    font-size: 1.1rem;
-    text-align: center;
- }
-main {
-    background-color: var(--shadow-soft);
-    padding: 13px;
-    border-radius: 30px;
-}
-.text {
-    padding: 0.9rem;
-    margin: 14px;
 
+.explicacao {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+main {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.text {
+    padding: 12px 15px;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #3a3f54;
+    background: #181c27;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.text:focus {
+    border-color: #5d6be6;
+}
+
+.addtask {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #5d6be6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addtask:hover {
+    background: #7886ff;
+}
+
+#taskList {
+    list-style: none;
+    max-width: 400px;
+    margin: 25px auto;
+    padding: 0;
+}
+
+#taskList li {
+    background: #181c27;
+    margin: 12px 0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #5d6be6;
+    transition: 0.3s;
+}
+
+#taskList li:hover {
+    background: #1f2534;
+}
+
+button.remove {
+    background: #c43c3c;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.remove:hover {
+    background: #e85555;
 }

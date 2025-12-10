@@ -42,5 +42,28 @@ function addTask() {
          // ⏳ Em desenvolvimento. O dev do futuro que lute pra terminar isso.
          // 🤯 Código em progresso — não pergunte quando vai ficar pronto.
 
+        // Kauan Souza -- Feito de ultima Hora animaçoes de bolhas no css do To-Do-List
+ function createBubble() {
+        const bubble = document.createElement("div");
+        bubble.classList.add("bubble");
 
+        const size = Math.random() * 25 + 10;
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
 
+        bubble.style.left = Math.random() * 100 + "vw";
+
+        const duration = 6 + Math.random() * 6;
+        bubble.style.animationDuration = duration + "s";
+
+        bubble.style.background = "rgba(255, 166, 0, 1)"; 
+      
+
+        document.body.appendChild(bubble);
+
+        setTimeout(() => {
+            bubble.remove();
+        }, duration * 1000);
+    }
+
+    setInterval(createBubble, 400);

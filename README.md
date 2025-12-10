@@ -24,3 +24,17 @@ Link: [https://toolboxdiario-3r0ia3xa0-ks7ms-projects.vercel.app/]
   Este projeto é um esforço contínuo e acolhemos de braços abertos a contribuição da comunidade! Seja para relatar um bug, sugerir uma nova funcionalidade, ou contribuir com código, seu feedback é valioso.
   Encontrou um Bug? Por favor, abra um [Issue] descrevendo o problema.
   Tem uma Sugestão? Adoramos novas ideias! Abra um [Issue] com o rótulo "Feature Request" (Solicitação de Recurso).
+
+## 🧠 Frases dos Devs do Projeto
+
+> "Quero agradecer a todos que participaram do projeto. Foi uma experiência muito legal trabalhar com vocês, e tenho certeza de que no futuro virão muitos outros projetos como este."  
+> — **Kauan Souza (@ks7m)**
+
+> "Sua Frase"  
+> — **Gabriel Brandão (@spbgabriel)**
+
+> "Sua Frase"  
+> — **Fábio Kaio (@fabiokaio)**
+
+> "Sua Frase"  
+> — **Lucas Emanoel (@LucasEmanoel0)**
