@@ -143,48 +143,6 @@ button.remove:hover {
 
 /*sidebar style*/
 .sidebar {
-    position: relative;
-    top: 0;
-    width: 300px;
-    height: 100vh;
-    background: #111;
-    color: white;
-    font-family: var(--body_font);
-    font-size: 1rem;
-    padding: 25px 25px;
-    transition: left 0.35s ease;
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-.sidebar img {
-    width: 200px;
-    height: auto;
-    top: 0;
-    left: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin: 15px 0;
-}
-
-.sidebar li a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-size: 16px;
-    transition: padding-left 0.2s ease;
-}
-
-.sidebar li a:hover {
-    padding-left: 10px;
-    color: #fff;
-}
-.sidebar {
     position: fixed;
     left: 0;
     top: 0;
@@ -193,13 +151,13 @@ button.remove:hover {
     background-color: #1e1e1e;
     padding: 20px;
     box-sizing: border-box;
+    z-index: 1000;
+    font-family: var(--body_font);
 }
 
-.container {
-    margin-left: 250px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+.sidebar img {
+    width: 200px;
+    height: auto;
 }
 
 .sidebar ul {
@@ -216,4 +174,52 @@ button.remove:hover {
     color: white;
     font-size: 18px;
     display: block;
+    transition: padding-left 0.2s ease;
+}
+
+.sidebar a:hover {
+    padding-left: 10px;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .sidebar li {
+        margin: 5px 0;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar img {
+        width: 150px;
+    }
+
+    .text {
+        width: 80%;
+    }
 }
