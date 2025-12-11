@@ -10,7 +10,16 @@
     <link type="image/png" sizes="96x96" rel="icon" href="imgs/Sky Weather.png">
 </head>
 <body>
-
+  <nav class="sidebar">
+        <ul>
+            <li> <a href="index.html" target="_blank"><i class="fa-solid fa-house"></i> Início</a> </li>
+            <li hidden><a href="#"><i class="fa-solid fa-cloud"></i> Previsão do Tempo</a></li>
+            <li><a href="calculadora.html"><i class="fa-solid fa-calculator"></i> Calculadora</a></li>
+            <li> <a href="tarefas.html"><i class="fa-solid fa-check-to-slot"></i> Lista de Tarefas </a> </li>
+            <li hidden><a href="#"><i class="fa-solid fa-globe"></i> Tradutor</a></li>
+            <li hidden><a href="#"><i class="fa-solid fa-gear"></i> Conversor</a></li>
+        </ul>
+    </nav>
     <main class="container">
         <!-- Cartão Principal -->
         <div class="weather-card">
@@ -28,7 +37,7 @@
                 </button>
             </div>
 
-            <!-- Área de Resultados (Onde seu JS vai jogar os dados) -->
+            <!-- Área de Resultados -->
             <div class="weather-info">
                 <h2 id="city-name">--</h2>
                 
