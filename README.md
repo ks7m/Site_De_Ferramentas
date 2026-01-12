@@ -30,11 +30,3 @@ Link: [https://toolboxdiario-3r0ia3xa0-ks7ms-projects.vercel.app/]
 > "Quero agradecer a todos que participaram do projeto. Foi uma experiência muito legal trabalhar com vocês, e tenho certeza de que no futuro virão muitos outros projetos como este."  
 > — **Kauan Souza (@ks7m)**
 
-> "Sua Frase"  
-> — **Gabriel Brandão (@spbgabriel)**
-
-> "Sua Frase"  
-> — **Fábio Kaio (@fabiokaio)**
-
-> "Sua Frase"  
-> — **Lucas Emanoel (@LucasEmanoel0)**
